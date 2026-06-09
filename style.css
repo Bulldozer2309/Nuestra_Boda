@@ -1,0 +1,706 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Cormorant Garamond', serif;
+    background:#faf7f2;
+    color:#4d3c2f;
+    line-height:1.6;
+    overflow-x:hidden;
+    animation:entrada 1.2s ease;
+    width:100%;
+}
+
+/* =======================
+   ANIMACIÓN INICIAL
+======================= */
+
+@keyframes entrada{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+/* =======================
+   PANTALLA DE BIENVENIDA
+======================= */
+
+#pantallaInicio{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:#faf7f2;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    transition:1.2s ease;
+}
+
+.inicio-contenido{
+    text-align:center;
+    padding:30px;
+}
+
+.inicio-contenido h1{
+    font-family:'Great Vibes', cursive;
+    font-size:5rem;
+    color:#B8860B;
+}
+
+.inicio-contenido p{
+    font-size:1.5rem;
+    margin:20px 0;
+}
+
+#entrarBtn{
+    background:#B8860B;
+    color:white;
+    border:none;
+    padding:15px 40px;
+    border-radius:15px;
+    cursor:pointer;
+    font-size:1.1rem;
+    transition:.3s;
+}
+
+#entrarBtn:hover{
+    transform:scale(1.05);
+}
+
+.ocultar{
+    opacity:0;
+    visibility:hidden;
+}
+
+/* =======================
+   PORTADA
+======================= */
+
+.hero{
+    min-height:100vh;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    overflow:hidden;
+    padding:20px;
+}
+.hero-fotos{
+    position:absolute;
+    inset:0;
+    display:flex;
+    z-index:1;
+}
+
+.foto-izquierda,
+.foto-derecha{
+    width:50%;
+    height:100%;
+}
+
+.foto-izquierda img,
+.foto-derecha img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.hero-fotos::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.35);
+}
+
+.overlay{
+    position:relative;
+    z-index:2;
+    background:rgba(255,255,255,.65);
+    padding:50px;
+    border-radius:25px;
+    width:90%;
+    max-width:800px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.subtitulo{
+    font-size:1.3rem;
+    color:#8a7a5b;
+    margin-bottom:15px;
+}
+
+.hero h1{
+    font-family:'Great Vibes', cursive;
+    font-size:4.8rem;
+    color:#B8860B;
+    margin-bottom:20px;
+    font-weight:normal;
+}
+
+.hero h2{
+    font-family:'Great Vibes', cursive;
+    font-size:4rem;
+    color:#B8860B;
+    line-height:1.3;
+    font-weight:normal;
+}
+
+.frase{
+    font-size:1.2rem;
+    font-style:italic;
+    margin-top:20px;
+    margin-bottom:30px;
+}
+
+.music-player{
+    margin-top:20px;
+}
+
+audio{
+    width:100%;
+}
+
+/* =======================
+   TITULOS
+======================= */
+
+h2{
+    font-family:'Great Vibes', cursive;
+    font-size:3.5rem;
+    color:#B8860B;
+    margin-bottom:30px;
+    font-weight:normal;
+}
+
+h3{
+    font-size:1.6rem;
+    color:#B8860B;
+    margin-bottom:15px;
+}
+
+/* =======================
+   CONTADOR
+======================= */
+
+.contador-section{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.contador{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.tiempo{
+    background:#B8860B;
+    color:white;
+    min-width:120px;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.tiempo span{
+    display:block;
+    font-size:2.5rem;
+    font-weight:bold;
+}
+
+.tiempo small{
+    font-size:1.1rem;
+}
+
+/* =======================
+   SECCIONES
+======================= */
+
+.historia,
+.foto-pareja,
+.familia,
+.evento,
+.vestimenta,
+.mensaje-final{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.historia{
+    max-width:900px;
+    margin:auto;
+}
+
+.historia p{
+    margin-bottom:20px;
+    font-size:1.2rem;
+}
+
+/* =======================
+   FOTO
+======================= */
+
+.marco-foto{
+    width:350px;
+    height:450px;
+    margin:auto;
+    padding:10px;
+    border:8px solid #B8860B;
+    border-radius:25px;
+    background:white;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    transition:.4s;
+}
+
+.marco-foto:hover{
+    transform:translateY(-5px);
+}
+
+.marco-foto img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+/* =======================
+   PADRES
+======================= */
+
+.padres-grid{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+/* =======================
+   PADRINOS
+======================= */
+
+.padrinos-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:25px;
+    margin-top:30px;
+}
+
+/* =======================
+   TARJETAS
+======================= */
+
+.card{
+    background:white;
+    padding:35px;
+    border-radius:25px;
+    width:100%;
+    max-width:700px;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
+}
+
+.card p{
+    font-size:1.2rem;
+    margin-bottom:8px;
+}
+
+/* =======================
+   EVENTO
+======================= */
+
+.evento-card{
+    background:white;
+    max-width:700px;
+    margin:auto;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+    transition:.4s;
+}
+
+.evento-card:hover{
+    transform:translateY(-5px);
+}
+
+.evento-card p{
+    font-size:1.2rem;
+}
+
+.boton-mapa{
+    display:inline-block;
+    margin-top:25px;
+    background:#B8860B;
+    color:white;
+    text-decoration:none;
+    padding:15px 30px;
+    border-radius:12px;
+    font-size:1.1rem;
+    transition:.3s;
+}
+
+.boton-mapa:hover{
+    background:#966d09;
+    transform:translateY(-3px);
+}
+
+/* =======================
+   VESTIMENTA
+======================= */
+
+.vestimenta-card{
+    background:white;
+    max-width:600px;
+    margin:auto;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+    transition:.4s;
+}
+
+.vestimenta-card:hover{
+    transform:translateY(-5px);
+}
+
+.vestimenta-card p{
+    font-size:1.2rem;
+}
+
+/* =======================
+   MENSAJE FINAL
+======================= */
+
+.mensaje-final{
+    background:#f4efe6;
+}
+
+.mensaje-final p{
+    font-size:1.2rem;
+    margin-bottom:15px;
+}
+
+.mensaje-final h3{
+    font-family:'Great Vibes', cursive;
+    font-size:3rem;
+    color:#B8860B;
+    margin-top:20px;
+    font-weight:normal;
+}
+
+/* =======================
+   ANIMACIONES SCROLL
+======================= */
+
+.animar{
+    opacity:0;
+    transform:translateY(80px);
+    transition:all 1.2s ease;
+}
+
+.animar.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:3.5rem;
+    }
+
+    .hero h2{
+        font-size:2.7rem;
+    }
+
+    h2{
+        font-size:2.7rem;
+    }
+
+    .inicio-contenido h1{
+        font-size:4rem;
+    }
+
+    .marco-foto{
+        width:280px;
+        height:380px;
+    }
+
+    .card{
+        max-width:100%;
+    }
+
+    .tiempo{
+        min-width:90px;
+    }
+}
+
+/* =======================================
+   MENU MOVIL
+======================================= */
+
+.menu-movil{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(10px);
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    padding:12px;
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+}
+
+.menu-movil a{
+    text-decoration:none;
+    color:#B8860B;
+    border:1px solid #B8860B;
+    padding:8px 15px;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.menu-movil a:hover{
+    background:#B8860B;
+    color:white;
+}
+
+/* =======================================
+   BOTON SUBIR
+======================================= */
+
+#btnSubir{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:55px;
+    height:55px;
+    border:none;
+    border-radius:50%;
+    background:#B8860B;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+    z-index:999;
+    box-shadow:0 5px 15px rgba(0,0,0,.25);
+    transition:.3s;
+}
+
+#btnSubir:hover{
+    transform:translateY(-3px);
+}
+
+/* =======================================
+   WHATSAPP
+======================================= */
+
+.confirmacion{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.boton-whatsapp{
+    display:inline-block;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    padding:15px 30px;
+    border-radius:15px;
+    font-size:1.2rem;
+    transition:.3s;
+}
+
+.boton-whatsapp:hover{
+    transform:translateY(-3px);
+}
+
+/* =======================================
+   RESPONSIVE PREMIUM
+======================================= */
+
+@media(max-width:768px){
+
+    html,
+    body{
+        overflow-x:hidden;
+    }
+
+    .hero{
+        min-height:100vh;
+        padding:15px;
+    }
+
+    .overlay{
+        width:100%;
+        padding:25px;
+    }
+
+    .hero h1{
+        font-size:3rem;
+    }
+
+    .hero h2{
+        font-size:2.2rem;
+    }
+
+    h2{
+        font-size:2.4rem;
+    }
+
+    h3{
+        font-size:1.3rem;
+    }
+
+    .subtitulo{
+        font-size:1rem;
+    }
+
+    .frase{
+        font-size:1rem;
+    }
+
+    .contador{
+        gap:10px;
+    }
+
+    .tiempo{
+        min-width:75px;
+        padding:15px;
+    }
+
+    .tiempo span{
+        font-size:1.8rem;
+    }
+
+    .tiempo small{
+        font-size:.8rem;
+    }
+
+    .historia p,
+    .card p,
+    .evento-card p,
+    .vestimenta-card p,
+    .mensaje-final p{
+        font-size:1.1rem;
+    }
+
+    .marco-foto{
+        width:260px;
+        height:340px;
+    }
+
+    .card{
+        width:100%;
+        max-width:100%;
+        padding:25px;
+    }
+
+    .evento-card{
+        width:100%;
+        padding:25px;
+    }
+
+    .vestimenta-card{
+        width:100%;
+        padding:25px;
+    }
+
+    .boton-mapa{
+        width:100%;
+        text-align:center;
+    }
+
+    .mensaje-final h3{
+        font-size:2.3rem;
+    }
+
+    .inicio-contenido h1{
+        font-size:3.8rem;
+    }
+
+    .inicio-contenido p{
+        font-size:1.2rem;
+    }
+
+    #entrarBtn{
+        width:100%;
+    }
+
+    .menu-movil{
+        gap:5px;
+    }
+
+    .menu-movil a{
+        font-size:.9rem;
+        padding:7px 12px;
+    }
+
+}
+@media(max-width:768px){
+
+    .hero-fotos{
+        flex-direction:column;
+    }
+
+    .foto-izquierda,
+    .foto-derecha{
+        width:100%;
+        height:50%;
+    }
+
+}
+
+/* =======================
+   CONFIRMACION
+======================= */
+
+.confirmacion{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.boton-confirmar{
+    display:inline-block;
+    margin-top:25px;
+    background:#B8860B;
+    color:white;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:12px;
+    font-size:1.2rem;
+    transition:.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.boton-confirmar:hover{
+    background:#966d09;
+    transform:translateY(-3px);
+}

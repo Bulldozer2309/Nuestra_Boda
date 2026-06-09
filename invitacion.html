@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de Boda</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- PANTALLA DE BIENVENIDA -->
+
+<div id="pantallaInicio">
+
+    <div class="inicio-contenido">
+
+        <h1>Nuestra Boda</h1>
+
+        <p>
+            José Antonio Cipriano Luna Salazar
+            <br>
+            &
+            <br>
+            Gloria Rodríguez Torrez
+        </p>
+
+        <button id="entrarBtn">
+            Abrir Invitación
+        </button>
+
+    </div>
+
+</div>
+
+<!-- AUDIO -->
+
+<audio id="musica" loop>
+    <source src="mp3/Perfect.mp3" type="audio/mpeg">
+</audio>
+
+<!-- PORTADA -->
+
+<section class="hero animar">
+
+    <div class="hero-fotos">
+
+        <div class="foto-izquierda">
+            <img src="img/foto1.jpeg" alt="Foto 1">
+        </div>
+
+        <div class="foto-derecha">
+            <img src="img/foto2.jpeg" alt="Foto 2">
+        </div>
+
+    </div>
+
+    <div class="overlay">
+
+        <p class="subtitulo">
+            Te invitamos a celebrar
+        </p>
+
+        <h1>
+            Nuestra Boda
+        </h1>
+
+        <h2>
+            Antonio 
+            <br>
+            &
+            <br>
+            Gloria
+        </h2>
+
+        <p class="frase">
+            "Dos corazones, una historia y un amor que ha perdurado a través del tiempo."
+        </p>
+
+    </div>
+
+</section>
+<!-- CUENTA REGRESIVA -->
+
+<section class="contador-section animar">
+
+    <h2>Faltan para nuestro gran día</h2>
+
+    <div class="contador">
+
+        <div class="tiempo">
+            <span id="dias">00</span>
+            <small>Días</small>
+        </div>
+
+        <div class="tiempo">
+            <span id="horas">00</span>
+            <small>Horas</small>
+        </div>
+
+        <div class="tiempo">
+            <span id="minutos">00</span>
+            <small>Minutos</small>
+        </div>
+
+        <div class="tiempo">
+            <span id="segundos">00</span>
+            <small>Segundos</small>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- NUESTRA HISTORIA -->
+
+<section class="historia animar">
+
+    <h2>❦ Nuestra Historia ❦</h2>
+
+   <p>
+    Después de más de 30 años compartiendo la vida juntos, construyendo
+    recuerdos inolvidables y formando una familia llena de amor, hemos
+    decidido dar uno de los pasos más importantes de nuestra historia:
+    unirnos en matrimonio.
+</p>
+
+<p>
+    Nuestro amor ha crecido con el paso del tiempo, fortaleciéndose en
+    cada alegría, en cada desafío y en cada sueño compartido. Hoy,
+    agradecidos por todo lo vivido, queremos celebrar este momento tan
+    esperado junto a quienes más queremos.
+</p>
+
+<p>
+    Finalmente, después de tantos años de caminar tomados de la mano,
+    podemos decir con felicidad que nuestro gran día ha llegado. Será un
+    honor contar con tu presencia para compartir esta fecha que marcará
+    para siempre nuestras vidas.
+</p>
+</section>
+
+<!-- FOTO -->
+
+<section class="foto-pareja animar">
+
+    <h2>❦ Nuestra Historia de Amor ❦</h2>
+
+    <div class="marco-foto animar">
+        <img src="img/foto3.jpeg" alt="Foto de los novios">
+    </div>
+
+</section>
+
+<!-- PADRES -->
+
+<section class="familia animar">
+
+    <h2>❦ Con la Bendición de Nuestros Padres ❦</h2>
+
+    <div class="padres-grid">
+
+        <div class="card animar">
+            <h3>Padres del Novio</h3>
+
+            <p>✞ Cipriano Luna Aragón</p>
+            <p>Marina Salazar Perez</p>
+        </div>
+
+        <div class="card animar">
+            <h3>Padres de la Novia</h3>
+
+            <p>✞ Jose Rodriguez Florez</p>
+            <p>✞ Gloria Torres perez</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PADRINOS -->
+
+<section class="familia animar">
+
+    <h2>❦ Padrinos de Honor ❦</h2>
+
+    <div class="padrinos-container">
+
+        <div class="card animar">
+            <h3>Padrinos de Velación</h3>
+            <p>Ricardo de las cruz Garcia </p>
+            <p>Clauidia Cuenca  </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- EVENTO -->
+
+<section class="evento animar" id="evento">
+
+    <h2>❦ Detalles del Evento ❦</h2>
+
+    <div class="evento-card animar">
+
+        <h3>✧ Fecha ✧</h3>
+        <p>08 de Agosto de 2026</p>
+
+        <br>
+
+        <h3>✧ Ceremonia Religiosa ✧</h3>
+        <p>4:00 PM</p>
+        <p>Parroquia de San Jose</p>
+
+        <a href="https://maps.app.goo.gl/VraEv2r1wtuXXNpc7"
+           target="_blank"
+           class="boton-mapa">
+           📍 Ver Iglesia
+        </a>
+
+        <br><br><br>
+
+        <h3>✧ Recepción ✧</h3>
+        <p>5:30 PM</p>
+        <p>Jardín y Salón Social Meyal</p>
+
+        <a href="https://maps.app.goo.gl/QgZ9n3on76dgLBVs7"
+           target="_blank"
+           class="boton-mapa">
+           📍 Ver Salón
+        </a>
+
+    </div>
+
+</section>
+
+<!-- VESTIMENTA -->
+
+<section class="vestimenta animar">
+
+    <h2>❦ Código de Vestimenta ❦</h2>
+
+    <div class="vestimenta-card animar">
+
+        <h3>✧ Vestimenta Formal ✧</h3>
+
+        <p>
+            Agradecemos tu presencia en este día tan especial.
+            Te invitamos a asistir con vestimenta elegante y formal.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- CONFIRMAR ASISTENCIA -->
+
+<section class="confirmacion animar">
+
+    <h2>❦ Confirmación de Asistencia ❦</h2>
+
+    <div class="vestimenta-card animar">
+
+        <h3>✧ RSVP ✧</h3>
+
+        <p>
+            Nos encantaría contar con tu presencia en este día tan especial.
+            Por favor confirma tu asistencia antes del día
+            <strong>08 de Agosto de 2026</strong>.
+        </p>
+
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSex5GtfD0ljFnzE7oiqLz1tNQcDpShC55H60fbligXIcLjduw/viewform?usp=publish-editor"
+           target="_blank"
+           class="boton-confirmar">
+            Confirmar Asistencia
+        </a>
+
+    </div>
+
+</section>
+
+<!-- MENSAJE FINAL -->
+
+<section class="mensaje-final animar">
+
+    <h2>❦ Gracias por Acompañarnos ❦</h2>
+
+    <p>
+        Tu presencia hará de este día un recuerdo aún más especial.
+    </p>
+
+    <p>
+        Esperamos compartir contigo uno de los momentos más importantes
+        de nuestras vidas.
+    </p>
+
+    <h3>
+        José Antonio Cipriano Luna Salazar
+        <br>
+        &
+        <br>
+        Gloria Rodríguez Torrez
+    </h3>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
